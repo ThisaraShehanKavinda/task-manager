@@ -1,0 +1,43 @@
+/* Basic reset and global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding: 2rem;
+  }
+}
+
+/* Toast styles */
+.Toastify__toast {
+  border-radius: 8px !important;
+  font-size: 14px !important;
+}
+
+.Toastify__toast--success {
+  background: #ffffff !important;
+}
+
+.Toastify__toast--error {
+  background: #fbfbfb !important;
+}
