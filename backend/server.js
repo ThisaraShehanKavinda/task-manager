@@ -35,8 +35,7 @@ app.use(notFound);
 app.use(errorHandler);
 
 
-// Export the app for testing
-module.exports = app;
+
 
 
 
@@ -52,3 +51,8 @@ if (process.env.NODE_ENV !== 'test') {
     `);
   });
 }
+
+
+
+// Export both app and server for testing
+module.exports = { app};
