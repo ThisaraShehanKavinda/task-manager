@@ -1,4 +1,5 @@
-import { LogoutIcon, UserCircleIcon } from '@heroicons/react/outline';
+import { FaSignOutAlt, FaUserCircle } from 'react-icons/fa';
+
 import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AuthContext from '../../context/AuthContext';
@@ -27,11 +28,11 @@ const Navbar = () => {
                 Dashboard
               </Link>
               <div className="navbar-user">
-                <UserCircleIcon className="user-icon" />
+                <FaUserCircle className="user-icon" />
                 <span>{user.name}</span>
               </div>
               <button onClick={handleLogout} className="logout-button">
-                <LogoutIcon className="logout-icon" />
+                <FaSignOutAlt className="logout-icon" />
                 Logout
               </button>
             </>
