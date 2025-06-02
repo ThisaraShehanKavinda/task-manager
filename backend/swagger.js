@@ -7,12 +7,26 @@ const options = {
     info: {
       title: 'Task Manager API',
       version: '1.0.0',
-      description: 'A MERN stack task management system',
+      description: 'API documentation for the Task Manager application',
     },
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT',
+        },
+      },
+    },
+    security: [{
+      bearerAuth: [],
+    }],
   },
-  apis: ['./routes/*.js'], // Path to the API routes
+  apis: ['./routes/*.js'], // Path to the API docs
 };
 
 const specs = swaggerJsdoc(options);
 
-module.exports = { specs, swaggerUi };
+module.exports = (app) => {
+  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+};
