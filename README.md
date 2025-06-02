@@ -1,6 +1,6 @@
 # Task Manager - MERN Stack Application
 
-![App Screenshot](./screenshots/dashboard.png)
+![App Screenshot](./screenshots/UserDashboard.png)
 
 ## ✨ Features
 - 🔐 JWT Authentication (Login/Register)
@@ -48,6 +48,11 @@ Explore API endpoints:
 
 🚀 Deployment
 Deploy to Render
+
+📸 Screenshots
+Login Page	Task Dashboard  Register Page  Create task page
+![Login](./screenshots/LoginUser.png)	![Dashboard](./screenshots/UserDashboard.png) ![register](./screenshots/RegisterUser.png)  ![create Task](./screenshots/createTask.png)
+
 
 🤝 Contributing
 Pull requests welcome!
