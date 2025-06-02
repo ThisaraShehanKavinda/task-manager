@@ -71,11 +71,11 @@
 }
 
 .input-error {
-  border-color: #ef4444 !important;
+  border-color: #fcfcfc !important;
 }
 
 .error-message {
-  color: #ef4444;
+  color: #ffffff;
   font-size: 0.75rem;
   margin-top: 0.25rem;
 }
