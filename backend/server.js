@@ -4,6 +4,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
+const { specs, swaggerUi } = require('./swagger');
 
 dotenv.config();
 connectDB();
@@ -19,6 +20,8 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/tasks', require('./routes/taskRoutes'));
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 // Error Handling Middleware
 app.use(require('./middleware/errorMiddleware'));
