@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/task-manager
+      - JWT_SECRET=your_jwt_secret_here
+    depends_on:
+      - mongo
+    networks:
+      - task-network
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - task-network
+
+  mongo:
+    image: mongo:5.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - task-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  task-network:
+    driver: bridge
