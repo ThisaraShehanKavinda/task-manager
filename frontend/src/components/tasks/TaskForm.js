@@ -16,7 +16,7 @@ const TaskForm = () => {
     register, 
     handleSubmit, 
     formState: { errors },
-    reset,
+    
     setValue
   } = useForm();
 
