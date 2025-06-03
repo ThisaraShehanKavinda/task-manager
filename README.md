@@ -15,7 +15,7 @@
 - MongoDB (Local or Atlas)
 - Git
 
-### Local Developmen
+### Local Development
 1. Clone the repo:
    ```bash
    git clone https://github.com/YOUR_USERNAME/task-manager.git
